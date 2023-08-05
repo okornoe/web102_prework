@@ -5,6 +5,7 @@
 */
 
 // import the JSON data about the crowd funded games from the games.js file
+import games from './games.js';
 import GAMES_DATA from './games.js';
 
 // create a list of objects to store the data about the games using JSON.parse
@@ -69,20 +70,30 @@ addGamesToPage(GAMES_JSON);
 const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
+const totalBackers = GAMES_JSON.reduce((acc, bck) => {
+    //console.log(acc + bck.backers);
+    return acc + bck.backers;
+
+}, 0).toLocaleString('en-US');
 
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
-
+contributionsCard.innerHTML = ` ${totalBackers}`;
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
 
-// set inner HTML using template literal
+const amountRaised = GAMES_JSON.reduce((acc, amt) =>{
+    return acc + amt.pledged;
+}, 0).toLocaleString('en-US');
 
+// set inner HTML using template literal
+raisedCard.innerHTML = `$${amountRaised}`;
 
 // grab number of games card and set its inner HTML
-const gamesCard = document.getElementById("num-games");
 
+const gamesCard = document.getElementById("num-games");
+gamesCard.innerHTML = `${GAMES_JSON.length}`;
 
 /*************************************************************************************
  * Challenge 5: Add functions to filter the funded and unfunded games
