@@ -57,7 +57,7 @@ function addGamesToPage(games) {
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
-//addGamesToPage(GAMES_JSON);
+addGamesToPage(GAMES_JSON);
 
 
 /*************************************************************************************
@@ -107,12 +107,14 @@ function filterUnfundedOnly() {
 
     // use filter() to get a list of games that have not yet met their goal
     const underFundedGames = GAMES_JSON.filter((games) =>{
-        console.log(games.goal > games.pledged);
+        //console.log(games.goal > games.pledged);
+        
         return games.goal > games.pledged;
     });
 
     // use the function we previously created to add the unfunded games to the DOM
     addGamesToPage(underFundedGames);
+    console.log("click, unfunded")
 
 }
 
@@ -122,13 +124,15 @@ function filterFundedOnly() {
 
     // use filter() to get a list of games that have met or exceeded their goal
     const fundedGames = GAMES_JSON.filter((games) =>{
-        console.log(games.pledged >= games.goal);
+       // console.log(games.pledged >= games.goal);
+        
         return games.pledged >= games.goal;
     });
 
 
     // use the function we previously created to add unfunded games to the DOM
     addGamesToPage(fundedGames);
+    console.log("click, funded")
 
 }
 
@@ -138,6 +142,7 @@ function showAllGames() {
 
     // add all games from the JSON data to the DOM
     addGamesToPage(GAMES_JSON);
+    console.log("click, all games")
 
 }
 
@@ -147,9 +152,12 @@ const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
-unfundedBtn.addEventListener("click", filterUnfundedOnly());
-fundedBtn.addEventListener("click", filterFundedOnly());
-allBtn.addEventListener("click", showAllGames());
+
+unfundedBtn.addEventListener('click', filterUnfundedOnly);
+fundedBtn.addEventListener('click', filterFundedOnly);
+allBtn.addEventListener('click', showAllGames);
+
+
 
 
 /*************************************************************************************
@@ -162,7 +170,7 @@ const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
 const fundedGames = GAMES_JSON.filter((games) =>{
-    console.log(games.pledged >= games.goal);
+    //console.log(games.pledged >= games.goal);
     return games.pledged >= games.goal;
 });
 
@@ -189,9 +197,9 @@ const displayStr1 = `<p>A total amount raised of $${amtRaisedForFundedGames} has
                     ${numOfUnFundedGames == 1 ? " 1 game remains unfunded. We need your help to fund these amazing games!" :
                    `${numOfUnFundedGames} games remains unfunded. We need your help to fund these amazing games!`}  <p/>`;     
 
-console.log(displayStr1);
-console.log(amtRaisedForFundedGames, numOfFundedGames);
-console.log(displayStr);
+//console.log(displayStr1);
+//console.log(amtRaisedForFundedGames, numOfFundedGames);
+//console.log(displayStr);
 
 // create a new DOM element containing the template string and append it to the description container
 const descriptionCard = document.createElement("div");
