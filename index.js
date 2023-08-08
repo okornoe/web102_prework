@@ -51,7 +51,6 @@ function addGamesToPage(games) {
         // append the game to the games-container
         gamesContainer.append(gameCard);
     }
-
 }
 
 
@@ -107,8 +106,6 @@ function filterUnfundedOnly() {
 
     // use filter() to get a list of games that have not yet met their goal
     const underFundedGames = GAMES_JSON.filter((games) =>{
-        //console.log(games.goal > games.pledged);
-        
         return games.goal > games.pledged;
     });
 
@@ -124,8 +121,6 @@ function filterFundedOnly() {
 
     // use filter() to get a list of games that have met or exceeded their goal
     const fundedGames = GAMES_JSON.filter((games) =>{
-       // console.log(games.pledged >= games.goal);
-        
         return games.pledged >= games.goal;
     });
 
@@ -170,7 +165,6 @@ const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
 const fundedGames = GAMES_JSON.filter((games) =>{
-    //console.log(games.pledged >= games.goal);
     return games.pledged >= games.goal;
 });
 
@@ -187,23 +181,16 @@ const amtRaisedForFundedGames = GAMES_JSON.reduce((acc, games) =>{
 
 numOfUnFundedGames = GAMES_JSON.length- numOfFundedGames;
 // create a string that explains the number of unfunded games using the ternary operator
-//console.log("number of unfunded games ", fundedGames);
-const displayStr = `<p>A total amount raised of $${amtRaisedForFundedGames} has been
-                    raised for ${numOfFundedGames} of games. Currently, ${GAMES_JSON.length - numOfFundedGames}
-                    remains unfunded. We need your help to fund these amazing games!<p/>`;
 
-const displayStr1 = `<p>A total amount raised of $${amtRaisedForFundedGames} has been
+const displayHeader = `<p>A total amount raised of $${amtRaisedForFundedGames} has been
                     raised for ${numOfFundedGames} of games. Currently, 
                     ${numOfUnFundedGames == 1 ? " 1 game remains unfunded. We need your help to fund these amazing games!" :
                    `${numOfUnFundedGames} games remains unfunded. We need your help to fund these amazing games!`}  <p/>`;     
 
-//console.log(displayStr1);
-//console.log(amtRaisedForFundedGames, numOfFundedGames);
-//console.log(displayStr);
 
 // create a new DOM element containing the template string and append it to the description container
 const descriptionCard = document.createElement("div");
-descriptionCard.innerHTML = displayStr1;
+descriptionCard.innerHTML = displayHeader;
 descriptionContainer.append(descriptionCard);
 
 /************************************************************************************
@@ -221,9 +208,13 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 // use destructuring and the spread operator to grab the first and second games
 let [firstGame, secondGame, ...remGames] = sortedGames;
 
+
 // create a new element to hold the name of the top pledge game, then append it to the correct element
-const topGamesCard = document.createElement("div");
-firstGameContainer.append(topGamesCard);
+const winnerGameCard = document.createElement("div");
+winnerGameCard.innerHTML = firstGame.name;
+firstGameContainer.append(winnerGameCard);
 
 // do the same for the runner up item
-secondGameContainer.append(topGamesCard);
+const runnerUpGameCard = document.createElement("div");
+runnerUpGameCard.innerHTML = secondGame.name;
+secondGameContainer.append(runnerUpGameCard);
