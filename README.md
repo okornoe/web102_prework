@@ -15,16 +15,17 @@ The following **required** functionality is completed:
 * [X] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
 * [X] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
-<!--
 The following **optional** features are implemented:
- Consider implementing a navigation bar at the top that shows funded games and unfunded games 
-* [ ] List anything else that you can get done to improve the app functionality! -->
+<!-- Consider implementing a navigation bar at the top that shows funded games and unfunded games -->
+* [ ] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/fviikIB' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/imgur.com/a/fviikIB' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/fviikIB" data-context="false" ><a href="//imgur.com/a/fviikIB">codepath_web102_walkthrough</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
