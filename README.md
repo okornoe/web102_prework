@@ -4,7 +4,7 @@ Submitted by: **Kelvin Tetteh Okornoe**
 
 **Deep Sea Giving** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: 20 hours spent in total
+Time spent: 25 hours spent in total
 
 ## Required Features
 
@@ -15,15 +15,16 @@ The following **required** functionality is completed:
 * [X] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
 * [X] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
+<!--
 The following **optional** features are implemented:
-<!-- Consider implementing a navigation bar at the top that shows funded games and unfunded games -->
-* [ ] List anything else that you can get done to improve the app functionality!
+ Consider implementing a navigation bar at the top that shows funded games and unfunded games 
+* [ ] List anything else that you can get done to improve the app functionality! -->
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/fviikIB' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
