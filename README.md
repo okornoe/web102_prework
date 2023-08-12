@@ -25,9 +25,9 @@ Here's a walkthrough of implemented features:
 
 <img src='https://imgur.com/l4G2ElZ' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
+[ScreenToGif](https://www.screentogif.com/) for Windows
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -35,7 +35,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Adding the gif to the readme file
 
 ## License
 
