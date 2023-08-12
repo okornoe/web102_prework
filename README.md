@@ -23,8 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<!-- <img src='https://imgur.com/l4G2ElZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
-[Walk through](https://i.imgur.com/1vGVd5P.gifv)
+![](https://i.imgur.com/1vGVd5P.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
@@ -36,7 +35,7 @@ GIF created with ...
 
 ## Notes
 
-Had difficulties adding the gif to the readme file
+Had difficulties finding out how to render gif in the readme
 
 ## License
 
