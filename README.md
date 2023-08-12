@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 <!-- Consider implementing a navigation bar at the top that shows funded games and unfunded games -->
-* [ ] List anything else that you can get done to improve the app functionality!
+<!-- * [ ] List anything else that you can get done to improve the app functionality! -->
 
 ## Video Walkthrough
 
