@@ -35,7 +35,7 @@ GIF created with ...
 
 ## Notes
 
-Adding the gif to the readme file
+Had difficulties adding the gif to the readme file
 
 ## License
 
