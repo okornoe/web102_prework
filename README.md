@@ -37,6 +37,7 @@ GIF created with ...
 ## Notes
 
 Had difficulties adding the gif to the readme file
+Now walkthrough renders in vs code, but not on github
 
 ## License
 
